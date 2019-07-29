@@ -13,15 +13,15 @@
     <form action="" class="play__container">
        
         <h1 class="play__title">Adivina el número</h1>
-        <p class="counter">0</p>
+        <p class="play__counter">0</p>
 
-        <label for="" class="play__instructions-title">Introduce aquí tu número</label>
-        <input type="text" class="play__instructions-gap_number" value>
-        <button>prueba</button>
+        <label for="add-number" class="play__instructions-title">Introduce aquí tu número</label>
+        <input id="add-number" type="number" name="add-number" class="play__instructions-gap_number" value>
+        <button type="button" class="play__button">prueba</button>
 
     </form>
 
-    <div class="play__answer"></div>
+    <div class="play__feedback"></div>
 
 
     <script src="js/main.js"></script>
