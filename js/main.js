@@ -18,18 +18,23 @@ function getRandomNumber(max) {
 
 function NumberComp () {
 
-    
-    const newNumber = parseInt(input.value);
-    console.log(newNumber);
-
     let content = `<p>¡HAS GANADO, CAMPEONA!</p>`
     numCounter += 1;
     counter.innerHTML = numCounter;
-    
-    if (newNumber === input.value('')){
-        console.log(newNumber + 'tu puta madre');
+
+    const newNumber = parseInt(input.value);
+    console.log(newNumber);
+
+    if (isNaN(newNumber) === true){
+        console.log('tu puta madre');
+        content = `<p>Introduce un número cara 🥦</p>`;
+        feedback.innerHTML = content;
     }
-    else if ((newNumber > 100) || (newNumber < 0)) {
+   
+
+    
+    
+    if ((newNumber > 100) || (newNumber < 0)) {
         content = `<p>Este número no vale, tiene que ser un número entre 0-100</p>`
         feedback.innerHTML = content;
     } else if  (myRandomNumber === newNumber){
