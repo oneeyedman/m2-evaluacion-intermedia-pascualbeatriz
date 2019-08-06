@@ -29,12 +29,7 @@ function NumberComp () {
         console.log('tu puta madre');
         content = `<p>Introduce un número cara 🥦</p>`;
         feedback.innerHTML = content;
-    }
-   
-
-    
-    
-    if ((newNumber > 100) || (newNumber < 0)) {
+    } else if ((newNumber > 100) || (newNumber < 0)) {
         content = `<p>Este número no vale, tiene que ser un número entre 0-100</p>`
         feedback.innerHTML = content;
     } else if  (myRandomNumber === newNumber){
