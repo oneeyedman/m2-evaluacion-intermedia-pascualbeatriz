@@ -6,28 +6,33 @@ const feedback = document.querySelector('.play__feedback');
 const counter = document.querySelector('.play__counter');
 
 
-// Función que genera un número aleatorio hasta un máximo dado
+
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
   }
   
-  // Anda, chacho, píntame en la consola un número random hasta 100;
+
   const myRandomNumber = getRandomNumber(100);
   console.log(`Mi número aleatorio es ${myRandomNumber}`);
   let numCounter = 0;
 
 function NumberComp () {
 
+    
     const newNumber = parseInt(input.value);
     console.log(newNumber);
 
     let content = `<p>¡HAS GANADO, CAMPEONA!</p>`
     numCounter += 1;
     counter.innerHTML = numCounter;
-
-
-
-    if (myRandomNumber === newNumber){
+    
+    if (newNumber === input.value('')){
+        console.log(newNumber + 'tu puta madre');
+    }
+    else if ((newNumber > 100) || (newNumber < 0)) {
+        content = `<p>Este número no vale, tiene que ser un número entre 0-100</p>`
+        feedback.innerHTML = content;
+    } else if  (myRandomNumber === newNumber){
         feedback.innerHTML = content;
     } else if (myRandomNumber < newNumber){
         content = `<p>El número es demasiado alto</p>`
@@ -44,4 +49,3 @@ function NumberComp () {
 
 button.addEventListener('click', NumberComp);
 
-console.log('hola');
